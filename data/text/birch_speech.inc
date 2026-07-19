@@ -6,7 +6,9 @@ gText_Birch_Welcome::
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
+	.string "One thing cool about this is\n"
+	.string "we have access to many more pokemon\p"
+	.string "This POKéMON was not in the original game\p"
 	.string "\n"
 	.string "$"
 
