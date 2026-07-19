@@ -2,7 +2,9 @@ gText_Birch_Welcome::
 	.string "Hi! Kelsey!\p"
 	.string "Welcome to the first test\n"
 	.string "for your own POKéMON game!\p"
-	.string "I am the local “kooky” professor.\p"
+	.string "I am the local “kooky” professor as requested.\p"
+	.string "One thing cool about this is\n"
+	.string "we have access to many more pokemon\p"
 	.string "$"
 
 gText_Birch_Pokemon::
