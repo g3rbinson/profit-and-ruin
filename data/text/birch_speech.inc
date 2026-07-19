@@ -1,9 +1,10 @@
 gText_Birch_Welcome::
-	.string "Hi! Kelsey!\p"
+	.string "Hi! Nerd!\p"
 	.string "Welcome to the first test\n"
 	.string "for your own POKéMON game!\p"
-	.string "I am the local “kooky” professor as requested.\p"
-	.string "One thing cool about this is\n"
+	.string "I am the local “kooky” professor\n"
+	.string "as requested.\p"
+	.string "One thing cool about this version is\n"
 	.string "we have access to many more pokemon\p"
 	.string "$"
 
