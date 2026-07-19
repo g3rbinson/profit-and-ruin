@@ -201,6 +201,7 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8);
 static void NewGameBirchSpeech_ClearWindow(u8);
 static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8);
 static void Task_NewGameBirchSpeech_MainSpeech(u8);
+static void Task_NewGameBirchSpeech_SkipToGame(u8);
 static void NewGameBirchSpeech_WaitForThisIsPokemonText(struct TextPrinterTemplate *, u16);
 static void Task_NewGameBirchSpeech_AndYouAre(u8);
 static void Task_NewGameBirchSpeechSub_WaitForLotad(u8);
@@ -1391,7 +1392,17 @@ static void Task_NewGameBirchSpeech_MainSpeech(u8 taskId)
     {
         StringExpandPlaceholders(gStringVar4, gText_Birch_MainSpeech);
         AddTextPrinterForMessage(TRUE);
-        gTasks[taskId].func = Task_NewGameBirchSpeech_AndYouAre;
+        gTasks[taskId].func = Task_NewGameBirchSpeech_SkipToGame;
+    }
+}
+
+static void Task_NewGameBirchSpeech_SkipToGame(u8 taskId)
+{
+    if (!RunTextPrintersAndIsPrinter0Active())
+    {
+        gSaveBlock2Ptr->playerGender = FEMALE;
+        StringCopy(gSaveBlock2Ptr->playerName, COMPOUND_STRING("KELSEY"));
+        gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup;
     }
 }
 
